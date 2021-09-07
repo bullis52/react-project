@@ -1,0 +1,38 @@
+.movies_info__title{
+    color: #bbbbbb;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.movies_info__wrap{
+    padding: 100px 0 0 0;
+}
+.movies_info__title{
+    margin: 0 0 50px 0;
+}
+.card_movie{
+    display: flex;
+    align-items: center;
+}
+.card_movie_title{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.card_movie__img{
+    margin: 0 50px 0 0;
+}
+.card_movie_rating{
+   color: coral;
+    text-transform: uppercase;
+}
+.card_movie_genres{
+   color: #bbbbbb;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.movies_info__overview{
+    max-width: 500px;
+    padding: 50px 0 100px 0;
+}

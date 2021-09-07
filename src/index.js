@@ -3,10 +3,38 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {createStore} from 'redux'
+import {Provider} from "react-redux";
+const NEW_PAGE = 'NEW_PAGE'
+let initialState = {
+    movie:[],
+    genres:[],
+    totalPages:0,
+    page:1
+}
+
+const reducer = (state= initialState, action) => {
+    switch (action.type){
+        case "LOAD_FILMS":
+            return {...state, movie:[...action.payload.results]}
+        case NEW_PAGE:
+            return {...state,totalPages: action.payload}
+        case "PAGE":
+            return {...state,page: action.payload}
+        case "LOAD_GENRES":
+            return {...state, genres: [...action.payload]}
+
+        default:
+            return state
+    }
+}
+let store = createStore(reducer)
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <Provider store={store}>
+            <App />
+      </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
