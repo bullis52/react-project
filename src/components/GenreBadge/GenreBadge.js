@@ -9,8 +9,7 @@ export function GenreBadge ({genre_ids}){
     // console.log(genresIdsStr)
     const genresName = genres.filter(value => genresIdsStr.indexOf(value.id) !== -1)
 
-    // console.log(genresName)
-
+console.log(genre_ids)
     return(
         <div>
             {
